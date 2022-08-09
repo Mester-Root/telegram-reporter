@@ -31,6 +31,7 @@ class Report:
         self._id_ = _id_
     #@staticmethod
         with TelegramClient(self.name, self.api_id, self.api_hash) as client:
+                client.start()
                 result = client(functions.messages.ReportRequest(
                     peer=self.target,
                     id=self._id_,
