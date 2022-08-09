@@ -52,7 +52,6 @@ for banner in bnr:
     print('\033[92m'+banner, flush=True, end='')
     sleep(0.005)
 methods : str = input('\n\033[31m[~] \033[36mmethods\033[93m\t:\n\n\033[31m[*] \033[92maccount-group  \033[31m[\033[93m0\033[31m]\n\033[31m[*] \033[92mchannel-public \033[31m[\033[93m1\033[31m]\n\n\033[31m[?] \033[36mplease enter a number method \033[31m_> \033[0m')
-name : str = input('\n\033[31m[?] \033[20;37mplease enter your name account \033[31m_> \033[0m')
 api_hash : str = input('\n\033[31m[?] \033[20;37mmplease enter your api_hash account \033[31m_> \033[0')
 api_id : str = input('\n\033[31m[?] \033[20;37mmplease enter api_id account \033[31m_> \033[0m')
 sleep(1)
@@ -83,7 +82,7 @@ print('\n'*20)
 def runing():
     for i in range(num):
         try:
-            Report(name, api_id, api_hash, target, message, _id_)
+            Report('session_name', api_id, api_hash, target, message, _id_)
             print('\033[93m[+] \033[92msended \033[31m!')
         except:
             pass
